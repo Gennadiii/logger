@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "example_01": "node dist/examples/example_01/example_01.js"
   },
   "repository": {
     "type": "git",
@@ -12,22 +12,11 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@wdio/allure-reporter": "7.19.7",
-    "@wdio/cli": "7.19.7",
-    "@wdio/local-runner": "7.19.7",
-    "@wdio/mocha-framework": "7.19.7",
-    "@wdio/selenium-standalone-service": "7.19.5",
-    "@wdio/spec-reporter": "7.19.7",
-    "allure-commandline": "2.21.0",
     "chai": "4.3.7",
     "log4js": "6.9.1",
-    "tests-selector": "latest",
-    "typescript": "5.0.4",
-    "webdriverio": "7.19.7"
+    "typescript": "5.0.4"
   },
   "devDependencies": {
-    "@types/chai": "4.3.4",
-    "@types/mocha": "^10.0.1",
     "@types/node": "^18.16.0",
     "prettier": "^2.8.8"
   }
