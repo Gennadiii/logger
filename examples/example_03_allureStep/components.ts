@@ -1,10 +1,10 @@
-import {getLogger} from "./logger_NEW";
+import {logger} from "./logger";
 
 const log = {
-  baseComponent: getLogger("BaseComponent"),
-  inputField: getLogger("InputField"),
-  button: getLogger("Button"),
-}
+  baseComponent: logger.get("BaseComponent"),
+  inputField: logger.get("InputField"),
+  button: logger.get("Button"),
+};
 
 export abstract class BaseComponent {
   protected constructor(public locator: string) {}

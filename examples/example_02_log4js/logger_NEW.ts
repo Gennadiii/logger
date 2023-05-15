@@ -6,7 +6,7 @@ configure({
       type: "console",
       layout: {
         type: "pattern",
-        pattern: "%[%p [%d{hh.mm.ss.SSS}] {%c} %m%]",
+        pattern: "%[%-5.5p [%d{hh.mm.ss.SSS}] {%c} %m%]",
       },
     },
     file: {
@@ -14,7 +14,7 @@ configure({
       filename: `../../logs/${Date.now()}_${process.pid}.log`,
       layout: {
         type: "pattern",
-        pattern: "%p [%d{hh.mm.ss.SSS}] {%c} %m",
+        pattern: "%-5.5p [%d{hh.mm.ss.SSS}] {%c} %m",
       },
     },
   },
