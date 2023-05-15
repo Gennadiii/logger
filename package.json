@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "example_01": "node dist/examples/example_01/example_01.js"
+    "example_01": "node dist/examples/example_01/example_01.js",
+    "example_02": "node dist/examples/example_02_log4js/example_02.js"
   },
   "repository": {
     "type": "git",

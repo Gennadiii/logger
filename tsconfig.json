@@ -24,7 +24,6 @@
     "noImplicitOverride": true
   },
   "exclude": [
-    "./src/data/fileSample",
     "./dist",
     "./node_modules"
   ]
