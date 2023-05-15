@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "example_01": "node dist/examples/example_01/example.js",
-    "example_02_log4js": "node dist/examples/example_02_log4js/example.js",
-    "example_03_allureStep": "node dist/examples/example_03_allureStep/example.js"
+    "example_01": "node dist/example_01/example.js",
+    "example_02_log4js": "node dist/example_02_log4js/example.js",
+    "example_03_allureStep": "node dist/example_03_allureStep/example.js"
   },
   "repository": {
     "type": "git",

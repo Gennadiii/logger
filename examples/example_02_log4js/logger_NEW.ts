@@ -1,5 +1,7 @@
 import {configure, getLogger as getLog4jsLogger} from "log4js";
 
+const logDir  = `${process.cwd()}/logs`;
+
 configure({
   appenders: {
     console: {
@@ -11,7 +13,7 @@ configure({
     },
     file: {
       type: "file",
-      filename: `../../logs/${Date.now()}_${process.pid}.log`,
+      filename: `${logDir}/${Date.now()}_${process.pid}.log`,
       layout: {
         type: "pattern",
         pattern: "%-5.5p [%d{hh.mm.ss.SSS}] {%c} %m",

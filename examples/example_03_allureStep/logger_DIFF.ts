@@ -1,6 +1,8 @@
 import {configure, getLogger, Logger} from "log4js";
 import allureReporter from "@wdio/allure-reporter";
 
+const logDir  = `${process.cwd()}/logs`;
+
 configure({
   appenders: {
     console: {
@@ -12,7 +14,7 @@ configure({
     },
     file: {
       type: "file",
-      filename: `../../logs/${Date.now()}_${process.pid}.log`,
+      filename: `${logDir}/${Date.now()}_${process.pid}.log`,
       layout: {
         type: "pattern",
         pattern: "%-5.5p [%d{hh.mm.ss.SSS}] {%c} %m",
@@ -24,7 +26,7 @@ configure({
   },
 });
 
-export const logger = {
+export const logger_DIFF = {
   get(name: string): Logger {
     const log = getLogger(getBaseName(name));
     const allureStepHandler = {

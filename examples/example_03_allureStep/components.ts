@@ -1,9 +1,9 @@
-import {logger} from "./logger";
+import {logger_DIFF} from "./logger_DIFF";
 
 const log = {
-  baseComponent: logger.get("BaseComponent"),
-  inputField: logger.get("InputField"),
-  button: logger.get("Button"),
+  baseComponent: logger_DIFF.get("BaseComponent"),
+  inputField: logger_DIFF.get("InputField"),
+  button: logger_DIFF.get("Button"),
 };
 
 export abstract class BaseComponent {
