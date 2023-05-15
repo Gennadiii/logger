@@ -1,0 +1,31 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "incremental": true,
+    "tsBuildInfoFile": "./dist/.tsbuildinfo",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "target": "ES2019",
+    "lib": [
+      "ESNext"
+    ],
+    "outDir": "./dist",
+    "sourceMap": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "alwaysStrict": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "noImplicitOverride": true
+  },
+  "exclude": [
+    "./src/data/fileSample",
+    "./dist",
+    "./node_modules"
+  ]
+}

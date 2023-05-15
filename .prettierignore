@@ -1,0 +1,12 @@
+dist
+.idea
+node_modules
+.env
+*.indexHelper
+reports*
+screenshots*
+logs*
+src\data\fileSample*
+video*
+visualRegression/generated*
+tsconfig.json
