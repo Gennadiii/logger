@@ -11,7 +11,8 @@
     "example_05_nameShortener": "node dist/example_05_nameShortener/example.js",
     "example_06_pageComponent": "node dist/example_06_pageComponent/example.js",
     "example_07_pageComponentObj": "node dist/example_07_pageComponentObj/example.js",
-    "example_08_pageComponentFn": "node dist/example_08_pageComponentFn/example.js"
+    "example_08_pageComponentFn": "node dist/example_08_pageComponentFn/example.js",
+    "example_09_pageComponentObjFn": "node dist/example_09_pageComponentObjFn/example.js"
   },
   "repository": {
     "type": "git",
