@@ -103,8 +103,6 @@ interface logInterface<T> {
   getResult?: () => T | Promise<T>;
 }
 
-// --------------------------------------------- DIFF
-
 const pageProps = {};
 
 export function pageLogProxyDecorator<T extends object>(obj: T): T {
@@ -112,14 +110,42 @@ export function pageLogProxyDecorator<T extends object>(obj: T): T {
     get(pageObject, componentOrMethod) {
       const original = pageObject[componentOrMethod];
       if (isObject(original)) {
-        componentHandler({
-          page: pageObject,
-          prop: componentOrMethod.toString(),
-        });
+        isComponent(original) // diff
+          ? componentHandler({
+            page: pageObject,
+            prop: componentOrMethod.toString(),
+          })
+          : componentsObjectHandler({page: pageObject, obj: original}); // diff
       }
       return original;
     },
   });
+}
+
+function componentsObjectHandler<T>(params: componentsObjectHandlerInterface<T>): void {
+  const {page, obj} = params;
+  const originalObjectEntries = Object.entries(obj);
+  isComponent(
+    // might be empty
+    originalObjectEntries[0] &&
+    (originalObjectEntries[0][1] as Record<string, unknown>),
+  ) && elementsObjectHandler({page, obj});
+}
+
+function elementsObjectHandler<T>(params: componentsObjectHandlerInterface<T>): void {
+  const {obj, page} = params;
+  Object.entries(obj).forEach(([elementName, component]) => {
+    if (component?.["locator"]) {
+      pageProps[component["locator"]] = {
+        page,
+        element: elementName,
+      };
+    }
+  });
+}
+
+function isComponent(obj: Record<string, unknown>): boolean {
+  return Boolean(obj?.locator);
 }
 
 function isObject(param: unknown): boolean {
@@ -175,4 +201,9 @@ export function classLogDecorator<T>(Target: T): T {
       new Target(...args),
     );
   };
+}
+
+interface componentsObjectHandlerInterface<T> {
+  page: unknown;
+  obj: Promise<T> | T;
 }
