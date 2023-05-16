@@ -12,7 +12,8 @@
     "example_06_pageComponent": "node dist/example_06_pageComponent/example.js",
     "example_07_pageComponentObj": "node dist/example_07_pageComponentObj/example.js",
     "example_08_pageComponentFn": "node dist/example_08_pageComponentFn/example.js",
-    "example_09_pageComponentObjFn": "node dist/example_09_pageComponentObjFn/example.js"
+    "example_09_pageComponentObjFn": "node dist/example_09_pageComponentObjFn/example.js",
+    "example_10_pageAsyncFn": "node dist/example_10_pageAsyncFn/example.js"
   },
   "repository": {
     "type": "git",
