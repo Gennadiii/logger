@@ -8,7 +8,8 @@
     "example_02_log4js": "node dist/example_02_log4js/example.js",
     "example_03_allureStep": "node dist/example_03_allureStep/example.js",
     "example_04_service": "node dist/example_04_service/example.js",
-    "example_05_nameShortener": "node dist/example_05_nameShortener/example.js"
+    "example_05_nameShortener": "node dist/example_05_nameShortener/example.js",
+    "example_06_pageComponent": "node dist/example_06_pageComponent/example.js"
   },
   "repository": {
     "type": "git",
