@@ -1,0 +1,16 @@
+export const nameShortener = {
+  DevCenter: "DC",
+  Dashboard: "Dash",
+  FormationEvaluation: "FE",
+  GeneralInfo: "GI",
+  NewStreamFromBlankSourceTypeDialog: "NewStreamBlankSourceType",
+  NewStreamFromBlankTargetWellDialog: "NewStreamBlankTargetWell",
+  Confirmation: "Confirm",
+  ApiHelper: "",
+  Service: "",
+  Po_: "_",
+  Permission: "Perm",
+  Group: "Gr",
+  ManagePermission: "ManagePerm",
+  GeosteeringVisualization: "GV",
+};

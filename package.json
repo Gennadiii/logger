@@ -16,21 +16,41 @@
     "example_10_pageAsyncFn": "node dist/example_10_pageAsyncFn/example.js",
     "example_11_customFuncProps": "node dist/example_11_customFuncProps/example_DIFF1.js",
     "example_12_logConfig": "node dist/example_12_logConfig/example_DIFF1.js",
-    "example_13_passwords": "node dist/example_13_passwords/example.js"
+    "example_13_passwords": "node dist/example_13_passwords/example.js",
+    "runUnitTests": "jest",
+    "runUnitTestsCoverage": "node dist/helpers/unitTestCoverage/unitTestCoverage.tool.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Gennadiii/logger.git"
   },
   "license": "ISC",
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testRegex": ".*test.ts$",
+    "coverageDirectory": "./coverage/",
+    "coverageReporters": [
+      "text-summary",
+      "json-summary",
+      "html"
+    ],
+    "collectCoverageFrom": [
+      "theLogger/**/*ts",
+      "!theLogger/**/testsUtils.ts"
+    ]
+  },
   "dependencies": {
     "@wdio/allure-reporter": "7.19.7",
-    "chai": "4.3.7",
+    "jest": "^29.5.0",
     "lodash": "^4.17.21",
     "log4js": "6.9.1",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.1",
     "@types/node": "^18.16.0",
     "prettier": "^2.8.8"
   }
