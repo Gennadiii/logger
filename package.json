@@ -15,7 +15,8 @@
     "example_09_pageComponentObjFn": "node dist/example_09_pageComponentObjFn/example.js",
     "example_10_pageAsyncFn": "node dist/example_10_pageAsyncFn/example.js",
     "example_11_customFuncProps": "node dist/example_11_customFuncProps/example_DIFF1.js",
-    "example_12_logConfig": "node dist/example_12_logConfig/example_DIFF1.js"
+    "example_12_logConfig": "node dist/example_12_logConfig/example_DIFF1.js",
+    "example_13_passwords": "node dist/example_13_passwords/example.js"
   },
   "repository": {
     "type": "git",
