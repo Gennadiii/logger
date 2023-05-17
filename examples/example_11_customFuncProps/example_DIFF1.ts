@@ -2,6 +2,7 @@ import {service} from "./assembler";
 
 void (async function main() {
   try {
+    // diff
     console.dir(
       {functionProp: service.login.using["funcProp"]},
       {depth: 10, colors: true},
