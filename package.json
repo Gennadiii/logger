@@ -13,7 +13,8 @@
     "example_07_pageComponentObj": "node dist/example_07_pageComponentObj/example.js",
     "example_08_pageComponentFn": "node dist/example_08_pageComponentFn/example.js",
     "example_09_pageComponentObjFn": "node dist/example_09_pageComponentObjFn/example.js",
-    "example_10_pageAsyncFn": "node dist/example_10_pageAsyncFn/example.js"
+    "example_10_pageAsyncFn": "node dist/example_10_pageAsyncFn/example.js",
+    "example_11_customFuncProps": "node dist/example_11_customFuncProps/example_DIFF1.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   "dependencies": {
     "@wdio/allure-reporter": "7.19.7",
     "chai": "4.3.7",
+    "lodash": "^4.17.21",
     "log4js": "6.9.1",
     "typescript": "5.0.4"
   },
