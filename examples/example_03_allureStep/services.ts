@@ -1,7 +1,7 @@
 import {LandingPo, LoginPo} from "./pages";
-import {logger_DIFF} from "./logger_DIFF";
+import {logger} from "./logger";
 
-const log = logger_DIFF.get("LoginService");
+const log = logger.get("LoginService");
 
 export class LoginService {
   constructor(public loginPage: LoginPo, private landingPage: LandingPo) {}

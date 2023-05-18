@@ -1,5 +1,5 @@
 import {BaseComponent, Button, InputField} from "./components";
-import {logger} from "./logger_DIFF";
+import {logger} from "./logger_DIFF0";
 
 const log = logger.get("BasePo");
 

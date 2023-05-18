@@ -1,4 +1,4 @@
-import {LandingPo, LoginPo} from "./pages_DIFF";
+import {LandingPo, LoginPo} from "./pages_DIFF3";
 
 export class SomeVeryLongNameForLoginService {
   constructor(public loginPage: LoginPo, private landingPage: LandingPo) {}

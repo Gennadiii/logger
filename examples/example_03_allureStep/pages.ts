@@ -1,7 +1,7 @@
 import {BaseComponent, Button, InputField} from "./components";
-import {logger_DIFF} from "./logger_DIFF";
+import {logger} from "./logger";
 
-const log = logger_DIFF.get("BasePo");
+const log = logger.get("BasePo");
 
 abstract class BasePo {
   abstract staticElement: BaseComponent;

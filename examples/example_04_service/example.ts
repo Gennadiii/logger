@@ -1,4 +1,4 @@
-import {service} from "./assembler_DIFF";
+import {service} from "./assembler_DIFF1";
 
 void (async function main() {
   try {

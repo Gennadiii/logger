@@ -1,4 +1,4 @@
-import {logger} from "./logger_DIFF";
+import {logger} from "./logger_DIFF0";
 
 const log = {
   baseComponent: logger.get("BaseComponent"),

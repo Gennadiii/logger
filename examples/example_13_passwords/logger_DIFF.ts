@@ -342,11 +342,9 @@ function isPasswordInput(elementName: string): boolean {
 // diff>
 
 export function classLogDecorator<T>(Target: T): T {
-  // eslint-disable-next-line
   // @ts-ignore
   return function (...args): T {
     return componentLogProxyDecorator(
-      // eslint-disable-next-line
       // @ts-ignore
       new Target(...args),
     );

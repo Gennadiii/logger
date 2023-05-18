@@ -77,7 +77,7 @@ export function serviceProxyDecorator<T extends object>(obj: T): T {
 
 function log<T>(params: logInterface<T>): Promise<T> | T {
   const {name, logMessage, getResult} = params;
-  let {result} = params; // diff
+  let {result} = params; // diff1
   const baseName = getBaseName(name);
   const log4js = logger.get(name);
   log4js.info(logMessage);
@@ -102,7 +102,7 @@ interface logInterface<T> {
   name: string;
   logMessage: string;
   getResult?: () => T | Promise<T>;
-  result?: T | Promise<T>; // diff
+  result?: T | Promise<T>;
 }
 
 const pageProps = {};
@@ -113,7 +113,7 @@ export function pageLogProxyDecorator<T extends object>(obj: T): T {
       const original = pageObject[componentOrMethod];
       if (typeof original === "function") {
         return (...args) => {
-          // diff
+          // <diff0
           const result = original.apply(pageObject, args);
           if (isPromise(result)) {
             return pageActionHandler({
@@ -123,6 +123,7 @@ export function pageLogProxyDecorator<T extends object>(obj: T): T {
               args,
             });
           }
+          // diff0>
           if (isComponent(result)) {
             return pageMethodReturningComponentHandler({
               result,
@@ -258,11 +259,9 @@ export function componentLogProxyDecorator<T extends object>(obj: T): T {
 }
 
 export function classLogDecorator<T>(Target: T): T {
-  // eslint-disable-next-line
   // @ts-ignore
   return function (...args): T {
     return componentLogProxyDecorator(
-      // eslint-disable-next-line
       // @ts-ignore
       new Target(...args),
     );

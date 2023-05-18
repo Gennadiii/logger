@@ -26,7 +26,9 @@ configure({
   },
 });
 
-export const logger_DIFF = {
+// ------------------------------------------------- DIFF
+
+export const logger = {
   get(name: string): Logger {
     const log = getLogger(getBaseName(name));
     const allureStepHandler = {

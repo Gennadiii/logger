@@ -6,7 +6,6 @@ import {LogLevel} from "../../logger.types";
 const logConfig = Symbol();
 
 export const serviceAndApiLogProxy = {
-  // eslint-disable-next-line @typescript-eslint/ban-types
   get<T extends object>(obj: T, loggingLevel: LogLevel): T {
     return new Proxy(obj, {
       get(_class, method) {

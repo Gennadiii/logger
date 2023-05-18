@@ -1,4 +1,4 @@
-import {BaseComponent, Button, InputField} from "./components_DIFF";
+import {BaseComponent, Button, InputField} from "./components_DIFF2";
 
 abstract class BasePo {
   abstract staticElement: BaseComponent;

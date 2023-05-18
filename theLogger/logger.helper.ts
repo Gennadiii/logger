@@ -18,7 +18,6 @@ and use it to access page and element names.
 */
 
 export const loggerHelper = {
-  // eslint-disable-next-line
   get(name?: string) {
     const log: Logger = baseLogger.get(name, {withoutAllureHandler: true});
     const logWithAllure: Logger = baseLogger.get(name);

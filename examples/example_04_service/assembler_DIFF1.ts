@@ -1,6 +1,6 @@
-import {pageLogProxyDecorator, serviceProxyDecorator} from "./logger_DIFF";
-import {LandingPo, LoginPo} from "./pages_DIFF";
-import {SomeVeryLongNameForLoginService} from "./services";
+import {serviceProxyDecorator} from "./logger_DIFF0";
+import {LandingPo, LoginPo} from "./pages";
+import {SomeVeryLongNameForLoginService} from "./services_DIFF2";
 
 export const service = {
   login: serviceFactory({
@@ -11,8 +11,8 @@ export const service = {
 
 function serviceFactory(params: serviceFactoryInterface) {
   const {Pages, Service} = params;
-  const pageInstances = Pages.map(Page => pageLogProxyDecorator(new Page())); // DIFF
-  return serviceProxyDecorator(new Service(...pageInstances));
+  const pageInstances = Pages.map(Page => new Page());
+  return serviceProxyDecorator(new Service(...pageInstances)); // diff
 }
 
 interface serviceFactoryInterface {
