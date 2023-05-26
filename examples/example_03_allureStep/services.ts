@@ -1,5 +1,5 @@
 import {LandingPo, LoginPo} from "./pages";
-import {logger} from "./logger";
+import {logger} from "./logger_DIFF0";
 
 const log = logger.get("LoginService");
 

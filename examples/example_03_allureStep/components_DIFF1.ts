@@ -1,7 +1,7 @@
-import {logger} from "./logger";
+import {logger} from "./logger_DIFF0";
 
 const log = {
-  baseComponent: logger.get("BaseComponent"),
+  baseComponent: logger.get("BaseComponent"), // diff
   inputField: logger.get("InputField"),
   button: logger.get("Button"),
 };
